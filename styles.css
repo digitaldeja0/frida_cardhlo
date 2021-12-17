@@ -3,20 +3,30 @@
     --secondary-color:#bc96e6;
     --tertiary-color:#55286f;
     --read-color:#fff;
-
-
   }
   
 html,body{
     margin: 0;
     padding: 0;
-    background: var(--primary-color);
 }
 
 .card{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    max-width: 800px
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+}
+
+.card-img{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.card-content{
+    padding: 1em;
 }
 
 .card-title,
@@ -31,6 +41,7 @@ html,body{
     font-size: 1.75rem;
     /* 28%16 = 1.75 */
     font-family: 'Bakbak One', sans-serif;
+    margin: 0;
 
 }
 
@@ -38,4 +49,55 @@ html,body{
     font-size: 1rem;
     font-family: sans-serif;
     color: var(--read-color);
+    line-height: 1.6;
 }
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-btn{
+    font-size: 1.25rem;
+    background-color: var(--read-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: .25em 1em;
+    letter-spacing: 1px;
+
+}
+
+.card-mini-info{
+    margin: 0;
+    opacity: .6;
+    font-size: 1.1rem;
+}
+
+ /* Media Queries */
+
+ @media (min-width:600px) {
+     .card{
+         flex-direction: row;
+     }
+     .card-img{
+         height: 250px;
+         max-width: 30%;
+     }
+     .card-img{
+         flex-basis: 150;
+         object-fit:fit;
+         overflow: hidden;
+         min-width: 0;
+         min-height: 0;
+     }
+     .card-content{
+         display: flex;
+         flex-direction: column;
+     }
+     .card-footer{
+         margin-top: auto;
+     }
+     
+ }
