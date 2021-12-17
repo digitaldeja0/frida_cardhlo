@@ -1,5 +1,41 @@
+:root {
+    --primary-color: #210b2c;
+    --secondary-color:#bc96e6;
+    --tertiary-color:#55286f;
+    --read-color:#fff;
+
+
+  }
+  
 html,body{
     margin: 0;
     padding: 0;
-    background: blue;
+    background: var(--primary-color);
+}
+
+.card{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px
+}
+
+.card-title,
+.card-mini-info,
+.card-btn{
+    font-family: 'Bakbak One', sans-serif;
+    color: var(--secondary-color);
+}
+
+.card-title{
+    color: var(--secondary-color);
+    font-size: 1.75rem;
+    /* 28%16 = 1.75 */
+    font-family: 'Bakbak One', sans-serif;
+
+}
+
+.card-body{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: var(--read-color);
 }
